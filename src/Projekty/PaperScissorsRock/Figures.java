@@ -1,4 +1,4 @@
-package AP01PapScisorsStone;
+package Projekty.PaperScissorsRock;
 
 public enum Figures {
     PAPER("p"), SCISORS("n"), ROCK("k");

@@ -1,9 +1,9 @@
-package AP01PapScisorsStone;
+package Projekty.PaperScissorsRock;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class PapScisStoMain {
+public class PapScisRockMain {
     public static int totalGames = 0;
     public static int gameDraw = 0;
     public static int userGamesWin = 0;
@@ -89,6 +89,5 @@ public class PapScisStoMain {
 
         showStats();
     }
-
 
 }
