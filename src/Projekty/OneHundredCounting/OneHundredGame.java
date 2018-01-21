@@ -36,13 +36,12 @@ public class OneHundredGame {
             System.out.println("Comp choice: " + compChoice);
             actualresult-=compChoice;
             System.out.println("Actual result after comp: " + actualresult);
-
             if(gameEnd()){
                 System.out.println("Comp WIN");
+                break;
             }
         }
     }
-
     private boolean gameEnd(){
         return (actualresult<=1);
     }
