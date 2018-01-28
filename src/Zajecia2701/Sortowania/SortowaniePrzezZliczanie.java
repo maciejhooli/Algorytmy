@@ -23,7 +23,6 @@ public class SortowaniePrzezZliczanie {
             if (max < tab[i]) {
                 max = tab[i];
             }
-
         }
         return max;
     }

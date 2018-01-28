@@ -20,7 +20,11 @@ public class DeSzyfrCezara {
                     break;
                 }
             }
-            System.out.print(letters[(letter-keyToDeCode)%26]);
+            int temp = (letter - keyToDeCode);
+            if(temp<0) {
+                temp = letters.length + temp;
+            }
+            System.out.print(letters[temp]);
         }
 
 
