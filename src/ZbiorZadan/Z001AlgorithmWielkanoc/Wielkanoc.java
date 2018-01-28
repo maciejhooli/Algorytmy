@@ -1,4 +1,4 @@
-package Algorithm.Z001AlgorithmWielkanoc;
+package ZbiorZadan.Z001AlgorithmWielkanoc;
 
 import java.util.Scanner;
 
