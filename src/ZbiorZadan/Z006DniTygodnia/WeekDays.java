@@ -8,4 +8,5 @@ public enum WeekDays {
     Pt,
     Sb,
     Nd;
+
 }

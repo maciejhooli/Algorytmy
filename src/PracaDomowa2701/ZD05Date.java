@@ -89,8 +89,8 @@ public class ZD05Date {
             }
         }
 
-        if (year >= 1900 && year <= 9999)
-            this.year = year;
+        if (tempYear > 0)
+            this.year = tempYear;
         else
             this.year = 0;
     }
@@ -123,6 +123,19 @@ public class ZD05Date {
         sb.append("/").append(year);
 
         return sb.toString();
+    }
+
+    public int dayOfYear() {
+        int days = 0;
+        for (int i = 0; i < getMonth() - 1; i++) {
+            days = days + calendar[i];
+        }
+        if (getDay() > 0) {
+            days += getDay();
+        } else {
+            days = -1;
+        }
+        return days;
     }
 
 }

@@ -52,8 +52,6 @@ public class ZD02ChessboardGenerator {
         }
 
         if (n > 0 && m > 0) {
-//            System.out.println("Wielkosc planszy n x m: " + n + "x" + m);
-//            System.out.println("Kolor początkowy: " + userColorChoice);
             boardGenerator(n, m, userColorChoice);
         } else {
             System.out.println("Błędny wymiar planszy");
@@ -98,7 +96,7 @@ public class ZD02ChessboardGenerator {
             }
 
         }
-        for ( int i = 0; i < chessboard.length; i++) {
+        for (int i = 0; i < chessboard.length; i++) {
             for (int j = 0; j < chessboard[i].length; j++) {
                 System.out.print(chessboard[i][j] + "\t");
             }

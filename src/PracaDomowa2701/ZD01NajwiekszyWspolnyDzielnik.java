@@ -6,10 +6,15 @@ public class ZD01NajwiekszyWspolnyDzielnik {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String userInput = sc.nextLine();
+
+        int n = Integer.parseInt(userInput.substring(0, userInput.indexOf(' ')).trim());
+        int k = Integer.parseInt(userInput.substring(userInput.indexOf(' ')).trim());
+
+  /*      //Zabawa z tablicą CHARACTEROW
         char[] userInput = sc.nextLine().toCharArray();
         boolean space = false;
         int spaceIndex = 0;
-
         //Sprawdzenie dlugosci poszczególnych współczynników
         int counterN = 0;
         int counterK = 0;
@@ -38,7 +43,7 @@ public class ZD01NajwiekszyWspolnyDzielnik {
             k = (int) Math.pow(10, counterK - counter - 1) * Character.getNumericValue(userInput[i]) + k;
             counter++;
         }
-
+*/
         //Docelowe wyliczenie NWD
         try {
             System.out.println(nwd(n, k));
