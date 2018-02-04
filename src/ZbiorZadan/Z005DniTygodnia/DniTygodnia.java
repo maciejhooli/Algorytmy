@@ -1,4 +1,4 @@
-package ZbiorZadan.Z006DniTygodnia;
+package ZbiorZadan.Z005DniTygodnia;
 
 import java.util.Scanner;
 

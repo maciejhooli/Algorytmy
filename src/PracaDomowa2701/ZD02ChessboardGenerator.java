@@ -5,51 +5,58 @@ import java.util.Scanner;
 public class ZD02ChessboardGenerator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        char[] userInput = sc.nextLine().toCharArray();
+
+        String userInput = sc.nextLine().toString();
+        int n = Integer.parseInt(userInput.substring(0, userInput.indexOf(' ')).trim());
+        int m = Integer.parseInt(userInput.substring(userInput.indexOf(' ')).trim());
         char userColorChoice = sc.nextLine().charAt(0);
-        boolean space = false;
-        int spaceIndex = 0;
 
-        //Sprawdzenie dlugosci poszczególnych współczynników
-        int counterN = 0;
-        int counterM = 0;
-        for (int i = 0; i < userInput.length; i++) {
-            if (userInput[i] == ' ' && !space && i != 0) { //Wykrycie zakocznenia pierwszej liczby
-                space = true;
-                spaceIndex = i;
-            }
-            if (userInput[i] == ' ' && !space && i == 0) { //Wykrycie zakocznenia pierwszej liczby
-                continue;
-            }
-            if (userInput[i] == ' ' && space && counterM > 0) { //wykrycie zakonczenia drugiej liczby
-                break;
-            }
-            if (!space && Character.isDigit(userInput[i])) { //obliczanie wielkosci pierwszej liczby
-                counterN++;
-            }
-            if (space && Character.isDigit(userInput[i])) { //obliczanie wielkości drugiej liczby
-                counterM++;
-            }
-        }
-
-        //Przekształcenie tablicy char na int na podstawie ilości znaków
-        int n = 0;
-        for (int i = 0; i < counterN; i++) {
-            if (userInput[i] != ' ') {
-                n = (int) Math.pow(10, counterN - i - 1) * Character.getNumericValue(userInput[i]) + n;
-            } else {
-                counterN++;
-            }
-        }
-
-        int m = 0;
-        int counter = 0;
-        for (int i = spaceIndex + 1; i < userInput.length; i++) {
-            if (userInput[i] != ' ') {
-                m = (int) Math.pow(10, counterM - counter - 1) * Character.getNumericValue(userInput[i]) + m;
-                counter++;
-            }
-        }
+//       Nikomu niepotrzebne zabawy z CharArray...
+//          char[] userInput = sc.nextLine().toCharArray();
+//        char userColorChoice = sc.nextLine().charAt(0);
+//        boolean space = false;
+//        int spaceIndex = 0;
+//
+//        //Sprawdzenie dlugosci poszczególnych współczynników
+//        int counterN = 0;
+//        int counterM = 0;
+//        for (int i = 0; i < userInput.length; i++) {
+//            if (userInput[i] == ' ' && !space && i != 0) { //Wykrycie zakocznenia pierwszej liczby
+//                space = true;
+//                spaceIndex = i;
+//            }
+//            if (userInput[i] == ' ' && !space && i == 0) { //Wykrycie zakocznenia pierwszej liczby
+//                continue;
+//            }
+//            if (userInput[i] == ' ' && space && counterM > 0) { //wykrycie zakonczenia drugiej liczby
+//                break;
+//            }
+//            if (!space && Character.isDigit(userInput[i])) { //obliczanie wielkosci pierwszej liczby
+//                counterN++;
+//            }
+//            if (space && Character.isDigit(userInput[i])) { //obliczanie wielkości drugiej liczby
+//                counterM++;
+//            }
+//        }
+//
+//        //Przekształcenie tablicy char na int na podstawie ilości znaków
+//        int n = 0;
+//        for (int i = 0; i < counterN; i++) {
+//            if (userInput[i] != ' ') {
+//                n = (int) Math.pow(10, counterN - i - 1) * Character.getNumericValue(userInput[i]) + n;
+//            } else {
+//                counterN++;
+//            }
+//        }
+//
+//        int m = 0;
+//        int counter = 0;
+//        for (int i = spaceIndex + 1; i < userInput.length; i++) {
+//            if (userInput[i] != ' ') {
+//                m = (int) Math.pow(10, counterM - counter - 1) * Character.getNumericValue(userInput[i]) + m;
+//                counter++;
+//            }
+//        }
 
         if (n > 0 && m > 0) {
             boardGenerator(n, m, userColorChoice);
