@@ -1,4 +1,4 @@
-package ZbiorZadan.Z24KabalistycznyZapisDaty;
+package ZbiorZadan.ZD07KabalistycznyZapisDaty;
 
 import java.util.HashMap;
 import java.util.Scanner;
