@@ -22,7 +22,7 @@ public class ZD05ONP {
     }
 
     public static void main(String[] args) {
-        String userInput = "(2+3)*5=";
+        String userInput = "((2+7)/3+(14-3)*4)/2=";
         StringBuilder sb = new StringBuilder();
         fillDictionary();
 
@@ -31,88 +31,19 @@ public class ZD05ONP {
                 case '*':
                     onpMultiplication(userInput.charAt(i), sb);
                     break;
-                //                    if (st.empty()) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else if (st.peek() == hashMap.get(1)
-//                            || st.peek() == hashMap.get(2)
-//                            || st.peek() == hashMap.get(3)
-//                            || st.peek() == hashMap.get(4)) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    }
                 case '/':
                     onpMultiplication(userInput.charAt(i), sb);
                     break;
-                //                    if (st.empty()) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else if (st.peek() == hashMap.get(1)
-//                            || st.peek() == hashMap.get(2)
-//                            || st.peek() == hashMap.get(3)
-//                            || st.peek() == hashMap.get(4)) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    }
                 case '+':
                     onpAdd(userInput.charAt(i), sb);
                     break;
-                //                    if (st.empty()) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else if (st.peek() == hashMap.get(1)
-//                            || st.peek() == hashMap.get(2)
-//                            || st.peek() == hashMap.get(3)
-//                            || st.peek() == hashMap.get(4)) {
-//                        sb.append(st.peek());
-//                        st.pop();
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    }
                 case '-':
                     onpAdd(userInput.charAt(i), sb);
                     break;
-                //                    if (st.empty()) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else if (st.peek() == hashMap.get(1)
-//                            || st.peek() == hashMap.get(2)
-//                            || st.peek() == hashMap.get(3)
-//                            || st.peek() == hashMap.get(4)) {
-//                        sb.append(st.peek());
-//                        st.pop();
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    }
                 case '^':
                     onpMultiplication(userInput.charAt(i), sb);
                     break;
-//                    if (st.empty()) {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else if (st.peek() == hashMap.get(1)
-//                            || st.peek() == hashMap.get(2)
-//                            || st.peek() == hashMap.get(3)
-//                            || st.peek() == hashMap.get(4)) {
-//                        sb.append(st.peek());
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    } else {
-//                        st.push(userInput.charAt(i));
-//                        break;
-//                    }
+
                 case '(':
                     st.push(userInput.charAt(i));
                     break;
