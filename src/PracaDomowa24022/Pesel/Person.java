@@ -1,10 +1,5 @@
 package PracaDomowa24022.Pesel;
 
-import sun.util.calendar.BaseCalendar;
-
-import java.util.Calendar;
-import java.util.Date;
-
 public class Person {
     private String birthDate;
 
